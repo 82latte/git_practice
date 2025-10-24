@@ -1,0 +1,177 @@
+@charset "UTF-8";
+/* 全体設定 */
+* {
+    margin:0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* ヘッダー */
+.title_container, .copyright_container {
+    background: linear-gradient(-20deg, #fa82f0 0%, #82e8fa 100%);
+
+}
+.title, .copyright{
+    color: #ffffff;
+}
+.title_container{
+    width: 100%;
+    height: 10vh;
+    padding: 0;
+}
+
+.title{
+    margin: 0;
+    text-align: center;
+    line-height: 5rem;
+}
+
+/* メインコンテンツ　大枠 */
+.background{
+    width: 100%;
+    height: 82.5vh;
+    background: linear-gradient(-20deg, #fee8fc 0%, #d3f7fe 100%);
+}
+
+.container{
+    width: 85vw;
+    height: 82.5vh;
+    margin-left: 7.5vw;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    }
+
+
+/* ツール */
+.tools{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.messeage_display{
+    width: 70%;
+    height:4%;
+    margin: 2%;
+    text-align: center;
+    font-size: 120%;
+}
+
+#tools_resetButton{
+    width: 45%;
+    height: 5%;
+    text-align: center;
+    background-color: #82e8fa;
+    border: none;
+    font-size: 100%;
+}
+
+
+
+
+/* ボード本体 */
+.playing_board_container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.playing_board{
+    width: 35vw;
+    height: 35vw;
+}
+
+
+.playing_board_row{
+    width: 100%;
+    height: calc(100% / 3) ;
+    padding: 0;
+    margin:0;
+}
+.playing_board_cell{
+    width : calc(100% / 3) ;
+    height: 100%;
+    padding:1%;
+    margin: 0;
+    float: left;
+    background-color:#ebd7ff;
+    font-size: 300%;
+    border:solid 1px #ffffff;
+    
+}
+
+/* フッター */
+
+.copyright_container{
+    width: 100%;
+    height: 7.5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* スマホ用 */
+@media (max-width: 768px) {
+    .background{
+        height: 85vh;
+    }
+   .container{
+        width: 100vw;
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tools, .playing_board_container{
+        width: 100%;
+    }
+
+    .tools{
+        height: 40%;
+        order: 2;
+        display: flex;
+        justify-content: start;
+    }
+
+    .messeage_display{
+        margin: 0;
+    }
+
+    
+    #tools_resetButton{
+        height: 20%;
+    }
+
+    .playing_board_conteiner{
+        height: 60%;
+        order: 1;
+    }
+
+    .playing_board{
+        width: 50vw;
+        height: 50vw;
+    }
+    .messeage_display, .reset{
+         margin-top: 1.5%;    
+    }
+    .messeage_display {
+        width: 45vw;
+        height:20%;
+    }
+
+    .reset_button{
+        width: 20%;
+        height: 30%;
+    }
+
+    .copyright_container{
+        height: 5vh; 
+    }
+    
+}
